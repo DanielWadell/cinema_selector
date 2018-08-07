@@ -5,7 +5,7 @@
     <h1>Welcome to Cinema Selector</h1>
     <h2> Take your pick and find your flick! </h2>
   
-   <style>
+  <style>
 /* The container */
 .container {
     display: block;
@@ -46,7 +46,6 @@
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
     background-color: #2196F3;
-   
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -59,7 +58,6 @@
 /* Show the indicator (dot/circle) when checked */
 .container input:checked ~ .checkmark:after {
     display: block;
-  
 }
 
 /* Style the indicator (dot/circle) */
@@ -74,27 +72,28 @@
 </style>
 <body>
 
-<h2>Which genre would you like to watch?</h2>
+<h3>What genre would you like to watch?</h3>
 <label class="container">Action
-  <input type="radio" name="choice-action">
+  <input type="radio" name="radio">
   <span class="checkmark"></span>
 </label>
 <label class="container">Comedy
-  <input type="radio" name="choice-comedy">
+  <input type="radio" name="radio">
   <span class="checkmark"></span>
 </label>
 <label class="container">Drama
-  <input type="radio" name="choice-drama">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Horror
-  <input type="radio" name="choice-horror">
+  <input type="radio" name="radio">
   <span class="checkmark"></span>
 </label>
 <label class="container">Mystery
-  <input type="radio" name="choice-mystery">
+  <input type="radio" name="radio">
   <span class="checkmark"></span>
 </label>
+<label class="container">Horror
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
