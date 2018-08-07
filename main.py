@@ -37,12 +37,23 @@ class Results(webapp2.RequestHandler):
         
         movie_dict = {
             'comedy-movie': 'https://www.youtube.com/watch?v=ayTnvVpj9t4',
-            'action-movie': 'https://www.youtube.com/watch?v=gKTVQPOH8ZA'
+            'action-movie': 'https://www.youtube.com/watch?v=gKTVQPOH8ZA',
+            'mystery-movie': 'https://www.youtube.com/watch?v=66TuSJo4dZM',
+            'drama-movie': 'https://www.youtube.com/watch?v=7d_jQycdQGo',
+            'horror-movie': 'https://www.youtube.com/watch?v=E1YbOMDI59k'
             
         }
         
         if comedy_choice == True:
             self.response.write(results_template.render(movie_dict['comedy-movie']))
+        elif mystery_choice == True:
+            self.response.write(results_template.render(movie_dict['mystery-movie']))
+        elif action_choice == True:
+            self.response.write(results_template.render(movie_dict['action-movie']))
+        elif drama_choice == True:
+            self.response.write(results_template.render(movie_dict['drama-movie']))
+        elif horror_choice == True:
+            self.response.write(results_template.render(movie_dict['horror-movie']))
         
 
 
