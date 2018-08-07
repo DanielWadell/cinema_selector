@@ -36,10 +36,13 @@ class Results(webapp2.RequestHandler):
         horror_choice = self.request.get('user-horror-choice')
         
         movie_dict = {
-            'action': 'https://www.youtube.com/watch?v=gKTVQPOH8ZA',
+            'comedy-movie': 'https://www.youtube.com/watch?v=ayTnvVpj9t4',
+            'action-movie': 'https://www.youtube.com/watch?v=gKTVQPOH8ZA'
             
         }
         
+        if comedy_choice == True:
+            self.response.write(results_template.render(movie_dict['comedy-movie']))
         
 
 
