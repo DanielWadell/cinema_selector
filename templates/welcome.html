@@ -5,103 +5,99 @@
   
     <h2>Take your pic and find your flick!</h2>
 
-<h3> Comedy </h3>
-<label class="container">One
-  <input type="radio" checked="checked" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Two
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Three
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Four
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-
-<h3>Mystery</h3>
-<label class="container">One
-  <input type="radio" checked="checked" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Two
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Three
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Four
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-
-
-<h3>Action</h3>
-<label class="container">One
-  <input type="radio" checked="checked" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Two
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Three
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Four
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-
-
-<h3>Drama</h3>
-<label class="container">One
-  <input type="radio" checked="checked" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Two
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Three
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Four
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-
-
-<h3>Horror</h3>
-<label class="container">One
-  <input type="radio" checked="checked" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Two
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Three
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Four
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-
-<br>
-<br>
 <style>
-.btn {
+/* The container */
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+</style>
+<body>
+
+<h3>Which genre would you like to watch?</h3>
+<label class="container">Action
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Comedy
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Drama
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Horror
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container">Mystery
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.button {
   background-color: #f4511e;
   border: none;
   color: white;
@@ -109,20 +105,21 @@
   text-align: center;
   font-size: 16px;
   margin: 4px 2px;
-  opacity: 1;
+  opacity: 0.6;
   transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.btn:hover {opacity: 0.6}
+.button:hover {opacity: 1}
 </style>
+</head>
+<body>
 
-<button class="btn">Submit!</button>
 
+<button class="button">Submit!</button>
 
-
-</body>
-    
-    
     
   </body>
 </html>
