@@ -46,6 +46,7 @@
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
     background-color: #2196F3;
+   
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -58,6 +59,7 @@
 /* Show the indicator (dot/circle) when checked */
 .container input:checked ~ .checkmark:after {
     display: block;
+  
 }
 
 /* Style the indicator (dot/circle) */
@@ -74,7 +76,7 @@
 
 <h2>Which genre would you like to watch?</h2>
 <label class="container">Action
-  <input type="radio" checked="checked" name="choice-action">
+  <input type="radio" name="choice-action">
   <span class="checkmark"></span>
 </label>
 <label class="container">Comedy
