@@ -26,6 +26,12 @@ class Welcome(webapp2.RequestHandler):
         
    
 class Comedy(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_env.get_template('templates/comedy.html')
+        comedy_dict = {
+            'movie_trailer': 'https://www.youtube.com/embed/gKTVQPOH8ZA'
+        }
+        self.response.write(about_template.render(comedy_dict))
     
 
 
@@ -35,5 +41,5 @@ class Comedy(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', Welcome),
-    ('/comedy-results',Comedy)
+    ('/comedy',Comedy)
 ], debug=True)
