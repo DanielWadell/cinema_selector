@@ -41,5 +41,5 @@ class Comedy(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', Welcome),
-    ('/comedy',Comedy)
+    ('/comedy', Comedy)
 ], debug=True)
