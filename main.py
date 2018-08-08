@@ -59,11 +59,36 @@ class Horror(webapp2.RequestHandler):
         }
         self.response.write(about_template.render(horror_dict))
 
+class Action(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_env.get_template('templates/action.html')
+        action_movies = ['https://www.youtube.com/embed/bvaftiAu7mw','https://www.youtube.com/embed/gKTVQPOH8ZA',
+        'https://www.youtube.com/embed/pbA-tBrHNfI','https://www.youtube.com/embed/c4Jo8QoOTQ4','https://www.youtube.com/embed/0ZOcoxjeUYo']
+        shuffle(action_movies)
+        movie_pick = action_movies[0]
+        action_dict = {
+            'movie_trailer': movie_pick
+        }
+        self.response.write(about_template.render(action_dict))
     
-
+class Mystery(webapp2.RequestHandler):
+    def get(self):
+        about_template = the_jinja_env.get_template('templates/mystery.html')
+        mystery_movies = ['https://www.youtube.com/embed/5iaYLCiq5RM','https://www.youtube.com/embed/66TuSJo4dZM',
+        'https://www.youtube.com/embed/0vS0E9bBSL0','https://www.youtube.com/embed/bEvnwKFUnI0','https://www.youtube.com/embed/J4YV2_TcCoE']
+        shuffle(mystery_movies)
+        movie_pick = mystery_movies[0]
+        mystery_dict = {
+            'movie_trailer': movie_pick
+        }
+        self.response.write(about_template.render(mystery_dict))
+        
+        
 app = webapp2.WSGIApplication([
     ('/', Welcome),
     ('/comedy', Comedy),
     ('/drama', Drama),
-    ('/horror', Horror)
+    ('/horror', Horror),
+    ('/action', Action),
+    ('/mystery', Mystery)
 ], debug=True)
