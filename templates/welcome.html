@@ -1,25 +1,106 @@
-<html>
- 
- <center><h1 style="font-family:verdana;">Welcome to Cinema Selector!</h1></center>
- <center><h2> Take your pick and find your flick </h2></center>
- <br>
- <h2>Which genre would you like to watch?</h2>
-  <body>
-      <!--<body style="background-color:powderblue;">-->
-    <ul style="list-style-type:square">
-     <b><li><a href="/comedy">Comedy</a></li></b>
-     <br>
-      <b><li><a href="/action">Action</a></li></b>
-      <br>
-       <b><li><a href="/horror">Horror</a></li></b>
-       <br>
-        <b><li><a href="/mystery">Mystery</a></li></b>
-        <br>
-          <b><li><a href="/drama">Drama</a></li></b>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: #666;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style the content */
+article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Center the video */
+center {
+    
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Cinema Selector</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <li><a href="/comedy">Comedy</a></li>
+      <li><a href="/action">Action</a></li>
+      <li><a href="/mystery">Mystery</a></li>
+      <li><a href="/drama">Drama</a></li>
+      <li><a href="/horror">Horror</a></li>
     </ul>
+  </nav>
+  
+  <article>
+    <h1>Take your pic, and find your flick!</h1>
+    <h2>Great pic!</h2>
+    <p>Daniel Wadell, Amy Wall, Angel Gutierrez, and Javier Lemus are all credited with the creation of "Cinema Selector", all rights reserved.</p>
+  </article>
+</section>
 
+<footer>
+  <p>CSSIx Project of the year!</p>
+</footer>
 
-
-
-  </body>
+</body>
 </html>

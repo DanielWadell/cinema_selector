@@ -4,7 +4,6 @@ import jinja2
 import os
 from random import shuffle
 
-
 #libraries for APIs
 from google.appengine.api import urlfetch
 import json
