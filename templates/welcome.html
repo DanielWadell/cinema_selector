@@ -1,149 +1,16 @@
 <head>
 </head>
   <body>
-      <title>Cinema Selector</title>
-    <h1>Welcome to Cinema Selector</h1>
-    <h2> Take your pick and find your flick! </h2>
-  
-  <style>
-/* The container */
-.container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* Hide the browser's default radio button */
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-/* Create a custom radio button */
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-
-/* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
-    background-color: #2196F3;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
-    display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.container .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
-}
-</style>
-<body>
-
-<h3>What genre would you like to watch?</h3>
-<label class="container">Action
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Comedy
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Drama
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Mystery
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
-<label class="container">Horror
-  <input type="radio" name="radio">
-  <span class="checkmark"></span>
-</label>
+    <ul>
+     <b><li><a href="/comedy">Comedy</a></li></b>
+      <b><li><a href="/action">Action</a></li></b>
+       <b><li><a href="/horror">Horror</a></li></b>
+        <b><li><a href="/mystery">Mystery</a></li></b>
+          <b><li><a href="/drama">Drama</a></li></b>
+    </ul>
 
 
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.button {
-  background-color: #f4511e;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  font-size: 16px;
-  margin: 4px 2px;
-  opacity: 0.6;
-  transition: 0.3s;
-  display: inline-block;
-  text-decoration: none;
-  cursor: pointer;
-}
 
-.button:hover {opacity: 1}
-</style>
-</head>
-<body>
-
-<a class="button" href="https://cssxi-amemariee.c9users.io/final_project/cinema_selector/templates/results.html">Submit!</a>
-<style>
-.clickMe {
-    -moz-appearance: button;
-    -ms-appearance: button;
-    -o-appearance: button;
-    -webkit-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    color: #000;
-    padding: 0.2em 0.4em;
-}
-</style>
-
-<!--<form action="/action_page.php" method="get" target="_blank">-->
-<!--  First name: <input type="text" name="name"><br>-->
-<!--  <input type="submit" value="Submit">-->
-<!--</form>-->
-
-<!--<a href="result.html">-->
-<!--  <button>Take me to the login page</button>-->
-<!--</a>-->
-<!--<button type="button" formaction="results.html">Get In Touch!</button>-->
-<!--<input type="button" class= "button" onclick="location.href='results.htm';" value="Submit!" />-->
-
-<!--<button class="button">Submit!</button>-->
 
   </body>
 </html>
