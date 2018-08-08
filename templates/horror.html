@@ -16,10 +16,10 @@ body {
 /* Style the header */
 header {
     background-color: #666;
-    padding: 30px;
+    padding: 18px;
     text-align: center;
-    font-size: 35px;
-    color: white;
+    font-size: 28px;
+    color: #4FFFCD;
 }
 
 /* Container for flexboxes */
@@ -57,8 +57,15 @@ footer {
     background-color: #777;
     padding: 10px;
     text-align: center;
-    color: white;
+    color: #4FFFCD;
 }
+
+/*center the video*/
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
@@ -78,17 +85,176 @@ footer {
 <section>
   <nav>
     <ul>
-      <li><a href="/comedy">Comedy</a></li>
-      <li><a href="/action">Action</a></li>
-      <li><a href="/mystery">Mystery</a></li>
-      <li><a href="/drama">Drama</a></li>
-      <li><a href="/horror">Horror</a></li>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+</style>
+
+<a class=button href="/comedy">Comedy</a>
+<style>
+.clickMe {
+    -moz-appearance: button;
+    -ms-appearance: button;
+    -o-appearance: button;
+    -webkit-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: #000;
+    padding: 0.2em 0.4em;
+}
+</style>
+
+<style>
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+</style>
+
+<li><a class=button href="/action">Action</a></li>
+<style>
+.clickMe {
+    -moz-appearance: button;
+    -ms-appearance: button;
+    -o-appearance: button;
+    -webkit-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: #000;
+    padding: 0.2em 0.4em;
+}
+</style>
+
+<style>
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+</style>
+
+<li><a class=button href="/drama">Drama</a></li>
+<style>
+.clickMe {
+    -moz-appearance: button;
+    -ms-appearance: button;
+    -o-appearance: button;
+    -webkit-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: #000;
+    padding: 0.2em 0.4em;
+}
+</style>
+
+<style>
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+</style>
+
+<a class=button href="/mystery">Mystery</a>
+<style>
+.clickMe {
+    -moz-appearance: button;
+    -ms-appearance: button;
+    -o-appearance: button;
+    -webkit-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: #000;
+    padding: 0.2em 0.4em;
+}
+</style>
+<style>
+.button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {opacity: 1}
+</style>
+
+
+<li><a class=button href="/horror">Horror</a></li>
+<style>
+.clickMe {
+    -moz-appearance: button;
+    -ms-appearance: button;
+    -o-appearance: button;
+    -webkit-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    color: #000;
+    padding: 0.2em 0.4em;
+}
+</style>
     </ul>
   </nav>
   
   <article>
-    <h1>Take your pic, and find your flick!</h1>
-    <p>Select your genre to the left, and find out which movie you will be watching!</p>
+    <p>Great Choice! Have a great time watching! </p>
     
 <iframe width="420" height="315"
 src="{{movie_trailer}}">
