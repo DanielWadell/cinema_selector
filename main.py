@@ -2,7 +2,7 @@ import webapp2
 from random import shuffle
 import jinja2
 import os
-from random import shuffle
+from random import randint
 
 
 
@@ -73,13 +73,17 @@ class Action(webapp2.RequestHandler):
     
 class Mystery(webapp2.RequestHandler):
     def get(self):
+        spot = randint(0,5)
         about_template = the_jinja_env.get_template('templates/mystery.html')
         mystery_movies = ['https://www.youtube.com/embed/5iaYLCiq5RM','https://www.youtube.com/embed/66TuSJo4dZM',
         'https://www.youtube.com/embed/0vS0E9bBSL0','https://www.youtube.com/embed/bEvnwKFUnI0','https://www.youtube.com/embed/J4YV2_TcCoE']
-        shuffle(mystery_movies)
-        movie_pick = mystery_movies[0]
+        mystery_movies_title = ['Shutter Island','Inception','Memento','Zodiac','Se7en']
+        movie_pick = mystery_movies[spot]
+        movie_title_pick = mystery_movies_title[spot]
         mystery_dict = {
-            'movie_trailer': movie_pick
+            'movie_trailer': movie_pick,
+            'movie_title': movie_title_pick
+           # 'movie-description': 
         }
         self.response.write(about_template.render(mystery_dict))
         
