@@ -2,10 +2,6 @@ import webapp2
 from random import shuffle
 import jinja2
 import os
-<<<<<<< HEAD
-=======
-
->>>>>>> 0bd1dc2b5634b06d500488ef77b1b122b2bdd3b7
 
 #libraries for APIs
 from google.appengine.api import urlfetch
