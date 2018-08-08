@@ -73,16 +73,20 @@ class Action(webapp2.RequestHandler):
     
 class Mystery(webapp2.RequestHandler):
     def get(self):
-        spot = randint(0,5)
+        spot = randint(0,4)
         about_template = the_jinja_env.get_template('templates/mystery.html')
         mystery_movies = ['https://www.youtube.com/embed/5iaYLCiq5RM','https://www.youtube.com/embed/66TuSJo4dZM',
         'https://www.youtube.com/embed/0vS0E9bBSL0','https://www.youtube.com/embed/bEvnwKFUnI0','https://www.youtube.com/embed/J4YV2_TcCoE']
         mystery_movies_title = ['Shutter Island','Inception','Memento','Zodiac','Se7en']
+        mystery_movies_director = ['Martin Scorsese', 'Christopher Nolan', 'Christopher Nolan', 'David Fincher', 'David Fincher']
         movie_pick = mystery_movies[spot]
         movie_title_pick = mystery_movies_title[spot]
+        movie_director = mystery_movies_director[spot]
         mystery_dict = {
             'movie_trailer': movie_pick,
-            'movie_title': movie_title_pick
+            'movie_title': movie_title_pick,
+            'movie_director': movie_director
+            
            # 'movie-description': 
         }
         self.response.write(about_template.render(mystery_dict))
