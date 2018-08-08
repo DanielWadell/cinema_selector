@@ -30,6 +30,7 @@ class Comedy(webapp2.RequestHandler):
         about_template = the_jinja_env.get_template('templates/comedy.html')
         comedy_movies = ['https://www.youtube.com/embed/cd-go0oBF4Y']
         movie_pick = comedy_movies[0]
+        
         comedy_dict = {
             'movie_trailer': 'https://www.youtube.com/embed/cd-go0oBF4Y'
         }
