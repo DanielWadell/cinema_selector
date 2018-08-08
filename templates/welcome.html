@@ -16,10 +16,10 @@ body {
 /* Style the header */
 header {
     background-color: #666;
-    padding: 30px;
+    padding: 18px;
     text-align: center;
-    font-size: 35px;
-    color: white;
+    font-size: 28px;
+    color: #4FFFCD;
 }
 
 /* Container for flexboxes */
@@ -57,13 +57,15 @@ footer {
     background-color: #777;
     padding: 10px;
     text-align: center;
-    color: white;
+    color: #4FFFCD;
 }
 
-/* Center the video */
-center {
-    
-}
+/*center the video*/
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
@@ -92,14 +94,19 @@ center {
   </nav>
   
   <article>
-    <h1>Take your pic, and find your flick!</h1>
-    <h2>Great pic!</h2>
+    <h1 h1>Take your pic and find your flick! </h1>
+    <p>Choose a genre to the left, and get your movie!</p>
+    
+<iframe width="420" height="315"
+src="{{movie_trailer}}">
+</iframe>
+    
     <p>Daniel Wadell, Amy Wall, Angel Gutierrez, and Javier Lemus are all credited with the creation of "Cinema Selector", all rights reserved.</p>
   </article>
 </section>
 
 <footer>
-  <p>CSSIx Project of the year!</p>
+  <p>CSSIx project of the year!</p>
 </footer>
 
 </body>
