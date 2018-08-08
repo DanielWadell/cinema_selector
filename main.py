@@ -2,6 +2,10 @@ import webapp2
 from random import shuffle
 import jinja2
 import os
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0bd1dc2b5634b06d500488ef77b1b122b2bdd3b7
 
 #libraries for APIs
 from google.appengine.api import urlfetch
@@ -27,8 +31,10 @@ class Welcome(webapp2.RequestHandler):
 class Comedy(webapp2.RequestHandler):
     def get(self):
         about_template = the_jinja_env.get_template('templates/comedy.html')
+        comedy_movies = ['https://www.youtube.com/embed/go0oBF4Y']
+        movie_pick = comedy_movies[0]
         comedy_dict = {
-            'movie_trailer': 'https://www.youtube.com/embed/gKTVQPOH8ZA'
+            'movie_trailer': 'https://www.youtube.com/embed/go0oBF4Y'
         }
         self.response.write(about_template.render(comedy_dict))
     
