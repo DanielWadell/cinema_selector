@@ -66,7 +66,7 @@ class Horror(webapp2.RequestHandler):
         horror_movies = ['https://www.youtube.com/embed/k10ETZ41q5o','https://www.youtube.com/embed/k5WQZzDRVtw',
         'https://www.youtube.com/embed/F_UxLEqd074','https://www.youtube.com/embed/a_Hw4bAUj8A','https://www.youtube.com/embed/lQKs169Sl0I']
         horror_movies_title = ['The Conjuring','The Babadook','Paranormal Activity','The Blair Witch Project','The Silence of the Lambs']
-        horror_movies_director = ['James Wan', 'Jennifer Kent', 'Oren Peli', 'Eduardo Sánchez', 'Jonathan Demme']
+        horror_movies_director = ['James Wan', 'Jennifer Kent', 'Oren Peli', 'Eduardo Sanchez', 'Jonathan Demme']
         movie_pick = horror_movies[spot]
         movie_title_pick = horror_movies_title[spot]
         movie_director = horror_movies_director[spot]
