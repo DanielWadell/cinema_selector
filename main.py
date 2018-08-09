@@ -81,7 +81,7 @@ class Horror(webapp2.RequestHandler):
         'https://www.youtube.com/embed/F_UxLEqd074','https://www.youtube.com/embed/a_Hw4bAUj8A','https://www.youtube.com/embed/lQKs169Sl0I']
         horror_movies_title = ['The Conjuring','The Babadook','Paranormal Activity','The Blair Witch Project','The Silence of the Lambs']
         horror_movies_director = ['James Wan', 'Jennifer Kent', 'Oren Peli', 'Eduardo Sanchez', 'Jonathan Demme']
-        horror_movies_description = ['In 1970, paranormal investigators and demonologists Lorraine (Vera Farmiga) and Ed (Patrick Wilson) Warren are summoned to the home of Carolyn (Lili Taylor) and Roger (Ron Livingston) Perron. The Perrons and their five daughters have recently moved into a secluded farmhouse, where a supernatural presence has made itself known. Though the manifestations are relatively benign at first, events soon escalate in horrifying fashion, especially after the Warrens discover the houses macabre history.',
+        horror_movies_descriptions = ['In 1970, paranormal investigators and demonologists Lorraine (Vera Farmiga) and Ed (Patrick Wilson) Warren are summoned to the home of Carolyn (Lili Taylor) and Roger (Ron Livingston) Perron. The Perrons and their five daughters have recently moved into a secluded farmhouse, where a supernatural presence has made itself known. Though the manifestations are relatively benign at first, events soon escalate in horrifying fashion, especially after the Warrens discover the houses macabre history.',
         'A single mother, plagued by the violent death of her husband, battles with her sons fear of a monster lurking in the house, but soon discovers a sinister presence all around her.',
         'After moving into a suburban home, a couple becomes increasingly disturbed by a nightly demonic presence.',
         'Found video footage tells the tale of three film students (Heather Donahue, Joshua Leonard, Michael C. Williams) who have traveled to a small town to collect documentary footage about the Blair Witch, a legendary local murderer. Over the course of several days, the students interview townspeople and gather clues to support the tales veracity. But the project takes a frightening turn when the students lose their way in the woods and begin hearing horrific noises.',
@@ -89,7 +89,7 @@ class Horror(webapp2.RequestHandler):
         movie_pick = horror_movies[spot]
         movie_title_pick = horror_movies_title[spot]
         movie_director = horror_movies_director[spot]
-        movie_description = horror_movies_description[spot]
+        movie_description = horror_movies_descriptions[spot]
         horror_dict = {
             'movie_trailer': movie_pick,
             'movie_title': movie_title_pick,
@@ -110,10 +110,12 @@ class Action(webapp2.RequestHandler):
         movie_pick = action_movies[spot]
         movie_title_pick = action_movies_title[spot]
         movie_director = action_movies_director[spot]
+        movie_description = action_movies_descriptions[spot]
         action_dict = {
             'movie_trailer': movie_pick,
             'movie_title': movie_title_pick,
-            'movie_director': movie_director
+            'movie_director': movie_director,
+            'movie_description': movie_description
         }
         self.response.write(about_template.render(action_dict))
     
@@ -129,10 +131,12 @@ class Mystery(webapp2.RequestHandler):
         movie_pick = mystery_movies[spot]
         movie_title_pick = mystery_movies_title[spot]
         movie_director = mystery_movies_director[spot]
+        movie_description = mystery_movies_descriptions[spot]
         mystery_dict = {
             'movie_trailer': movie_pick,
             'movie_title': movie_title_pick,
-            'movie_director': movie_director
+            'movie_director': movie_director,
+            'movie_description': movie_description
             
            # 'movie-description': 
         }
